@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin Dashboard - CarMatePro</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 10vh; /* Ensure full viewport height */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color:  #4a90e2;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-family: Arial;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #ff7200;
+        }
+
+        /* Main content area */
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .main-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .admin-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .admin-option {
+            flex: 1 0 300px; /* Adjust width as needed */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            text-decoration: none; /* Remove default link styling */
+            color: inherit; /* Inherit text color */
+        }
+
+        .admin-option:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .admin-option-content {
+            padding: 15px;
+        }
+
+        .admin-option-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .admin-option-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+       /* Footer styles */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color:  #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        /* Form styles */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container label {
+            margin-bottom: 10px;
+            text-align: left;
+            color: #555;
+        }
+
+        .form-container input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button-group button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .button-group button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .button-group button[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .button-group button[type="reset"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="logo">CarMatePro Admin</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="companyinfo.html">ADD COMPANY</a></li>
+                <li><a href="Companylist.jsp">COMPANY LIST</a></li>
+                <li><a href="#">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <h2>Add Company</h2>
+        <div class="form-container">
+            <form action="addcompany1.jsp" method="post">
+                <label for="company-name"> <h3> Company Name: </h3> </label>
+                <input type="text" id="name" name="name" required>
+                <div class="button-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 CarMatePro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+    <!-- Ionicons Script (optional) -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

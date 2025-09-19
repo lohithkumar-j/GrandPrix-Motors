@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Car Showroom Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .bg-gradient-to-b {
+            background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #4dc0b5, #3490dc);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- About Us Section -->
+    <section class="container mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Left Column with Text -->
+            <div class="px-6">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Customer Reviews</h2>
+                <h1 class="text-3xl font-bold mb-7 text-gradient"><i>Discover what our customers have to say about their experience with CarMatePro</i></h1>
+
+                <p class="text-gray-700 leading-relaxed">"I recently bought my dream car from CarMatePro, and I must say the experience was exceptional.
+                    The showroom had a fantastic range of cars, and the staff were knowledgeable and helpful throughout the process.
+                    From selecting the right model to arranging financing, everything was smooth and transparent. I highly recommend CarMatePro
+                    for anyone looking to buy a car hassle-free."</p>
+
+                <br>
+
+                <p class="text-gray-700 leading-relaxed mt-4">"My experience with CarMatePro was outstanding. They provided me with all the information
+                    I needed to make an informed decision. The showroom ambiance was welcoming, and they offered competitive pricing and flexible financing options.
+                    I'm thrilled with my new car, and I wouldn't hesitate to recommend CarMatePro to friends and family."</p>
+
+                <br>
+
+                <p class="text-gray-700 leading-relaxed mt-4">"Choosing CarMatePro for my car purchase was the best decision. They made the entire process
+                    easy and enjoyable. The staff were friendly and professional, and they went above and beyond to ensure I got the best deal. If you're in the market
+                    for a new car, look no further than CarMatePro."</p>
+
+            </div>
+            <!-- Right Column with Images and Team Details -->
+            <div class="text-center">
+                <img src="{% static 'car1.jpg' %}" alt="Customer 1" class="rounded-full h-40 w-40 mx-auto mb-4">
+                <h3 class="text-xl font-bold"><i>Customer</i></h3>
+                <p class="text-gray-700">John Doe</p>
+                <p class="text-gray-500">Recent Customer</p>
+                <img src="{% static 'customer2.jpg' %}" alt="Customer 2" class="rounded-full h-40 w-40 mx-auto mt-8 mb-4">
+                <h3 class="text-xl font-bold"><i>Customer</i></h3>
+                <p class="text-gray-700">Jane Smith</p>
+                <p class="text-gray-500">Recent Customer</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 car showroom management system. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

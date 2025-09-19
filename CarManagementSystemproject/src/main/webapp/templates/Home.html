@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Brands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            width: 99%;
+            height: 75px;
+            background-color: #4a90e2;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 35px;
+            font-family: Arial;
+        }
+
+        .menu {
+            display: flex;
+            margin-left: auto;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #d1ecf1;
+        }
+
+        .content {
+            flex-grow: 1;
+            color: #333;
+            text-align: center;
+            padding: 40px 10px;
+        }
+
+        .content h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .tab-button:hover {
+            background-color: #357ABD;
+        }
+
+        .tab-button.active {
+            background-color: #333;
+        }
+
+        .brand-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .brand-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .brand-item:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-item p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            color: #4a90e2;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="logo">CarMatePro</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Aboutus.html">ABOUTUS</a></li>
+                <li><a href="Reviews.html">REVIEWS</a></li>
+                <li><a href="Contactus.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Search new cars by brand</h1>
+        <div class="tabs">
+            <button class="tab-button active">Current</button>
+            <button class="tab-button">Upcoming</button>
+            <button class="tab-button">Expired</button>
+        </div>
+        <div class="brand-grid">
+            <div class="brand-item">
+                <a href="maruti.html"><p>Maruti</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="tata.html"><p>Tata</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="Kia.html"><p>Kia</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="toyota.html"><p>Toyota</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="hyundai.html"><p>Hyundai</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="mahindra.html"><p>Mahindra</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="honda.html"><p>Honda</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="mg.html"><p>MG</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="skoda.html"><p>Skoda</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="jeep.html"><p>Jeep</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="renault.html"><p>Renault</p></a>
+            </div>
+            <div class="brand-item">
+                <a href="nissan.html"><p>Nissan</p></a>
+            </div>
+        </div>
+    </div>
+      <div class="content">
+		    <!-- Your existing content -->
+		</div>
+		
+		<div id="company-list" class="brand-grid">
+		    <!-- Company names will be dynamically added here -->
+		</div>
+		
+		<div class="footer">
+		    <p>&copy; 2024 CarMatePro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+	</div>
+           
+
+    <div class="footer">
+        <p>&copy; 2024 CarMatePro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("getCompanies") // Replace with your backend endpoint to fetch companies
+            .then(response => response.json())
+            .then(data => {
+                const companyList = document.getElementById("company-list");
+                data.forEach(company => {
+                    const companyItem = document.createElement("div");
+                    companyItem.classList.add("brand-item"); // Apply your existing styling
+                    companyItem.innerHTML = `<a href="#">${company}</a>`; // Adjust as per your structure
+                    companyList.appendChild(companyItem);
+                });
+            });
+    });
+</script>
+    
+     <script>
+     
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("getCars")
+                .then(response => response.json())
+                .then(data => {
+                    const carList = document.getElementById("car-list");
+                    data.forEach(car => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = car;
+                        carList.appendChild(listItem);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

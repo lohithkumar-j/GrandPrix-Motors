@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Cars - CarMatePro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 75px;
+            background-color: #4a90e2;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 35px;
+            font-family: Arial;
+        }
+
+        .menu {
+            display: flex;
+            margin-left: auto;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #d1ecf1;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .car-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .car-item:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .car-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .car-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .car-details {
+            flex: 3;
+        }
+
+        .car-details h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .car-details p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .like-button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .like-button:hover {
+            background-color: #357ABD;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="logo">CarMatePro</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Kia Cars</h1>
+        <div class="car-grid">
+            <!-- Car 1 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="C:\Users\Kavya Sri\OneDrive\Desktop\Documents6C85480369C7}\Documents\Pictures\Screenshots\Screenshot 2024-07-03 105349.png" alt="Kia Car 1">
+                </div>
+                <div class="car-details">
+                    <h2>Kia Sonet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a ligula.</p>
+                    <p class="price"></p>
+                    <a href="#" class="like-button">Like</a>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="path/to/kia-car2.jpg" alt="Kia Car 2">
+                </div>
+                <div class="car-details">
+                    <h2>Kia Model 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a ligula.</p>
+                    <p class="price">$30,000</p>
+                    <a href="#" class="like-button">Like</a>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="path/to/kia-car3.jpg" alt="Kia Car 3">
+                </div>
+                <div class="car-details">
+                    <h2>Kia Model 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a ligula.</p>
+                    <p class="price">$28,000</p>
+                    <a href="#" class="like-button">Like</a>
+                </div>
+            </div>
+
+            <!-- Car 4 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="path/to/kia-car4.jpg" alt="Kia Car 4">
+                </div>
+                <div class="car-details">
+                    <h2>Kia Model 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a ligula.</p>
+                    <p class="price">$35,000</p>
+                    <a href="#" class="like-button">Like</a>
+                </div>
+            </div>
+
+            <!-- Car 5 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="path/to/kia-car5.jpg" alt="Kia Car 5">
+                </div>
+                <div class="car-details">
+                    <h2>Kia Model 5</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a ligula.</p>
+                    <p class="price">$32,000</p>
+                    <a href="#" class="like-button">Like</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 CarMatePro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</body>
+</html>

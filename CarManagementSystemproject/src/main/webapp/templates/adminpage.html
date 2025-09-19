@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CarMatePro</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color:  #4a90e2;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-family: Arial;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .menu ul li {
+            margin-left: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color:  #4a90e2;
+        }
+
+        /* Main content area */
+        .main-content {
+            flex: 1;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .admin-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .admin-option {
+            flex: 1 0 300px; /* Adjust width as needed */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            text-decoration: none; /* Remove default link styling */
+            color: inherit; /* Inherit text color */
+        }
+
+        .admin-option:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .admin-option-content {
+            padding: 15px;
+        }
+
+        .admin-option-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .admin-option-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Footer styles */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color:  #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="logo">CarMatePro Admin</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="#">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome Admin</h1>
+        <p>Manage your car showroom efficiently with CarMatePro.</p>
+
+        <!-- Admin Options -->
+        <div class="admin-options">
+            <!-- User Management Option -->
+            <a href="UsersList.jsp" class="admin-option">
+                <div class="admin-option-content">
+                    <h2 class="admin-option-title">User Management</h2>
+                    <p class="admin-option-description">Manage users' information, roles, and permissions.</p>
+                </div>
+            </a>
+
+            <!-- Car Management Option -->
+            <a href="Addcar.html" class="admin-option">
+                <div class="admin-option-content">
+                    <h2 class="admin-option-title">Car Management</h2>
+                    <p class="admin-option-description">Add, edit, and remove cars from the showroom inventory.</p>
+                </div>
+            </a>
+
+            <!-- Company Information Option -->
+            <a href="Addcompany.html" class="admin-option">
+                <div class="admin-option-content">
+                    <h2 class="admin-option-title">Company Information</h2>
+                    <p class="admin-option-description">Update company details and contact information.</p>
+                </div>
+            </a>
+            
+            <!-- View Inquiries Option -->
+            <a href="view-inquiries.html" class="admin-option">
+                <div class="admin-option-content">
+                    <h2 class="admin-option-title">View Inquiries</h2>
+                    <p class="admin-option-description">View and manage customer inquiries and requests.</p>
+                </div>
+            </a>
+
+            <!-- View Feedback Option -->
+            <a href="view-feedback.html" class="admin-option">
+                <div class="admin-option-content">
+                    <h2 class="admin-option-title">View Feedback</h2>
+                    <p class="admin-option-description">Review and respond to customer feedback and inquiries.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 CarMatePro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+
+    <!-- Ionicons Script (optional) -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

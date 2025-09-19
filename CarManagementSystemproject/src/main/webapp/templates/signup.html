@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 75px;
+            background-color: #4a90e2;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 35px;
+            font-family: Arial;
+        }
+
+        .form-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Medium-sized container */
+        }
+
+        .form-box h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .form-box input[type="text"],
+        .form-box input[type="email"],
+        .form-box input[type="password"],
+        .form-box input[type="number"],
+        .form-box select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-box input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+        .footer {
+            width: 100%;
+            background: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        .form .link {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .liw {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .form .link a {
+            text-decoration: none;
+            color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">CarMatePro</div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h2>User Registration</h2>
+            <form id="signupForm" method="post" action="insertuser.jsp">
+                <input type="text" id="username" name="name" placeholder="Username" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="pwd" placeholder="Password" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                <input type="number" id="PhoneNumber" name="contactno" placeholder="PhoneNumber" required>
+                <input type="submit" value="Signup">
+                <p class="link">Already have an account?<br>
+                    <a href="index.html">Login</a> here
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 JSP Web Application. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const phoneNumber = document.getElementById('PhoneNumber').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                event.preventDefault();
+            } else if (password.length < 8 || !password.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/)) {
+                alert('Password must be at least 8 characters long and contain at least one special character.');
+                event.preventDefault();
+            } else if (phoneNumber.length !== 10) {
+                alert('Phone number must contain 10 digits');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
